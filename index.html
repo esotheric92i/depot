@@ -56,7 +56,8 @@
         .running-warrior {
             max-width: 100%;
             height: auto;
-            animation: run 0.1s infinite linear;
+            animation: run 2s infinite linear;
+	    animeation: rotate 4s infinite linear
         }
 
         @keyframes run {
@@ -70,6 +71,14 @@
                 transform: translateX(0);
             }
         }
+	@keyframes rotate {
+	    0% {
+	        transform: rotate(0deg);
+	    }
+	    100% {
+	        transform: rotate(360deg);
+	    }
+	}
     </style>
 </head>
 <body>
