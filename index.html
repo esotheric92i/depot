@@ -53,30 +53,21 @@
             border-top: 2px solid #fff;
         }
 
-        .running-warrior {
-            max-width: 100%;
-            height: auto;
-            animation: run 2s infinite linear;
-	    animeation: rotate 4s infinite linear
-        }
-
-        @keyframes run {
-            0% {
-                transform: translateX(0);
-            }
-            50% {
-                transform: translateX(80vw);
-            }
-            100% {
-                transform: translateX(0);
-            }
-        }
-	@keyframes rotate {
+	.running-warrior {
+	    max-width: 100%;
+	    height: auto;
+	    animation: runAndRotate 4s linear infinite;
+	}
+	
+	@keyframes runAndRotate {
 	    0% {
-	        transform: rotate(0deg);
+	        transform: translateX(0) rotate(0deg);
+	    }
+	    50% {
+	        transform: translateX(80vw) rotate(180deg);
 	    }
 	    100% {
-	        transform: rotate(360deg);
+	        transform: translateX(0) rotate(360deg);
 	    }
 	}
     </style>
